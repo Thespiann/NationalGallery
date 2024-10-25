@@ -29,6 +29,6 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
             startActivity(new Intent(MainActivity.this, HomepageActivity.class));
             finish();}
-        }, 5000);//wait 2s to continue to homepage
+        }, 3000);//wait 3s to continue to homepage
     }
 }

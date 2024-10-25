@@ -2,4 +2,20 @@
     <string name="app_name">NationalGallery</string>
     <string name="nationalGallery">Εθνική Πινακοθήκη</string>
     <string name="welcome">καλώς ορίσατε</string>
+    <string name="artists_collections">Συλλογές ανα καλλιτέχνη</string>
+    <string name="themes_collections">Συλλογές ανα θέμα</string>
+    <string name="a_fasianos">A. Fasianos</string>
+    <string name="n_gkikas">N. Gkikas</string>
+    <string name="fasianos_btn">Α. Φασιανός</string>
+    <string name="gkikas_btn">Ν. Χατζηκυριάκος- Γκίκας</string>
+    <string name="portraits_btn">Προσωπογραφίες</string>
+    <string name="name_year">Κοντοπούλου Δέσποινα - 2024</string>
+    <string name="portraits">portraits</string>
+    <string name="fasianosquote">“Η ομορφιά κρύβεται πίσω απο αυτό που αισθάνεσαι, όχι πίσω απο αυτο που βλέπεις”</string>
+    <string name="fasianosTitle1">Βυζαντινός Νέος</string>
+    <string name="fasianosTitle2">Φτερουγίσματα</string>
+    <string name="fasianosTitle3">Χειρομάντης στο δωμάτιο του</string>
+    <string name="fasianosTitle4">Πουλιά</string>
+    <string name="gkikasquote">“Το χαλι όπου παίζαμε ήτανε κόκκινο”</string>
+    <string name="portraitsquote">“Το έργο κάθε ανθρώπου, είτε πρόκειται για λογοτεχνία είτε μουσική είτε ζωγραφική είτε οτιδήποτε άλλο, είναι πάντα ένα πορτραίτο του εαυτού του”</string>
 </resources>

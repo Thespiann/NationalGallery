@@ -41,7 +41,7 @@
             android:layout_marginStart="1dp"
             android:fontFamily="@font/stix_two_text"
             android:gravity="end"
-            android:text="Συλλογές ανα καλλιτέχνη"
+            android:text="@string/artists_collections"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#2A4577"
             android:textColorHighlight="#2A4577"
@@ -59,13 +59,15 @@
             android:layout_height="27dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="1dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/stix_two_text"
             android:gravity="end"
-            android:text="Συλλογές ανα θέμα"
+            android:text="@string/themes_collections"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#2A4577"
             android:textColorHighlight="#2A4577"
             android:textSize="19sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -74,28 +76,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:contentDescription="@string/a_fasianos"
+            android:onClick="fasianosView"
             app:layout_constraintBottom_toTopOf="@+id/imageView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/fasianos1" />
+            app:srcCompat="@drawable/fasianos0" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="512dp"
+            android:layout_marginTop="504dp"
+            android:clickable="true"
+            android:contentDescription="@string/n_gkikas"
+            android:onClick="gkikasView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.554"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/gkikas1" />
+            app:srcCompat="@drawable/gkikas0" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"
-            android:text="Α. Φασιανός"
+            android:text="@string/fasianos_btn"
             android:textColor="@color/white"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -110,7 +117,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/stix_two_text"
             android:gravity="center"
-            android:text="Ν. Χατζηκυριάκος- Γκίκας"
+            android:text="@string/gkikas_btn"
             android:textColor="@color/white"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -124,27 +131,64 @@
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="56dp"
+            android:clickable="true"
+            android:contentDescription="@string/portraits"
+            android:onClick="portraitsView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.554"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/portraits1" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/portraits0" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"
-            android:text="Προσωπογραφίες"
+            android:text="@string/portraits_btn"
             android:textColor="@color/white"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="@+id/imageView4"
             app:layout_constraintStart_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/stix_two_text"
+            android:text="@string/name_year"
+            android:textColor="#596D92"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            tools:ignore="SmallSp" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

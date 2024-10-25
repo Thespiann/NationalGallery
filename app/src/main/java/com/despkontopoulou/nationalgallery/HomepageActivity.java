@@ -1,6 +1,8 @@
 package com.despkontopoulou.nationalgallery;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,15 @@ public class HomepageActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void fasianosView(View view){
+        startActivity(new Intent(HomepageActivity.this, FasianosActivity.class));
+    }
+    public void gkikasView(View view){
+        startActivity(new Intent(HomepageActivity.this, GkikasActivity.class));
+
+    }
+    public void portraitsView(View view){
+        startActivity(new Intent(HomepageActivity.this, PortraitsActivity.class));
     }
 }

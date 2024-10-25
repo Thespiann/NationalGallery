@@ -13,6 +13,15 @@
         android:theme="@style/Theme.NationalGallery"
         tools:targetApi="31">
         <activity
+            android:name=".PortraitsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GkikasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FasianosActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomepageActivity"
             android:exported="false" />
         <activity
