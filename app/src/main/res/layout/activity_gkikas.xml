@@ -151,7 +151,7 @@
             app:srcCompat="@drawable/gkikas5" />
 
         <TextView
-            android:id="@+id/gkikas1"
+            android:id="@+id/desc1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"
@@ -165,7 +165,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
         <TextView
-            android:id="@+id/gkikas2"
+            android:id="@+id/desc2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"
@@ -179,7 +179,7 @@
             app:layout_constraintTop_toTopOf="@+id/image2" />
 
         <TextView
-            android:id="@+id/gkikas3"
+            android:id="@+id/desc3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"
@@ -193,7 +193,7 @@
             app:layout_constraintTop_toTopOf="@+id/image3" />
 
         <TextView
-            android:id="@+id/gkikas4"
+            android:id="@+id/desc4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"
@@ -207,7 +207,7 @@
             app:layout_constraintTop_toTopOf="@+id/image4" />
 
         <TextView
-            android:id="@+id/gkikas5"
+            android:id="@+id/desc5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/stix_two_text"

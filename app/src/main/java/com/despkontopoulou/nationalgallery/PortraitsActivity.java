@@ -1,12 +1,7 @@
 package com.despkontopoulou.nationalgallery;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -23,32 +18,15 @@ public class PortraitsActivity extends PaintingDescription {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        SharedPreferences preferences = getSharedPreferences("preferences", MODE_PRIVATE);
         //we set the text descriptions for paintings using sharedprefrences
+
         String text1= preferences.getString("portraits1","desc");
         String text2= preferences.getString("portraits2","desc");
         String text3= preferences.getString("portraits3","desc");
         String text4= preferences.getString("portraits4","desc");
-
-        ImageView img1 = findViewById(R.id.image1);
-        TextView txt1 = findViewById(R.id.portraits1);
-        txt1.setText(text1);
-
-        ImageView img2 = findViewById(R.id.image2);
-        TextView txt2 = findViewById(R.id.portraits2);
-        txt2.setText(text2);
-
-        ImageView img3 = findViewById(R.id.image3);
-        TextView txt3 = findViewById(R.id.portraits3);
-        txt3.setText(text3);
-
-        ImageView img4 = findViewById(R.id.image4);
-        TextView txt4 = findViewById(R.id.portraits4);
-        txt4.setText(text4);
-
-        img1.setOnClickListener(v-> showDesc(img1,txt1));
-        img2.setOnClickListener(v-> showDesc(img2,txt2));
-        img3.setOnClickListener(v-> showDesc(img3,txt3));
-        img4.setOnClickListener(v-> showDesc(img4,txt4));
+        String[] texts= new String[]{text1,text2,text3,text4};
+        int[] imageIDs= new int[]{R.id.image1,R.id.image2,R.id.image3,R.id.image4};
+        int[] textIDs= new int[]{R.id.desc1,R.id.desc2,R.id.desc3,R.id.desc4};
+        setListeners(imageIDs,textIDs,texts);
     }
 }

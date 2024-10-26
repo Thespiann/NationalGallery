@@ -1,10 +1,6 @@
 package com.despkontopoulou.nationalgallery;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -21,33 +17,15 @@ public class FasianosActivity extends PaintingDescription {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        SharedPreferences preferences = getSharedPreferences("preferences", MODE_PRIVATE);
-        //we set the text descriptions for paintings using sharedprefrences
+        //get sharedprefrences strings and put in array
         String text1= preferences.getString("fasianos1","desc");
         String text2= preferences.getString("fasianos2","desc");
         String text3= preferences.getString("fasianos3","desc");
         String text4= preferences.getString("fasianos4","desc");
+        String[] texts= new String[]{text1,text2,text3,text4};
 
-        ImageView img1 = findViewById(R.id.image1);
-        TextView txt1 = findViewById(R.id.fasianos1);
-        txt1.setText(text1);
-
-        ImageView img2 = findViewById(R.id.image2);
-        TextView txt2 = findViewById(R.id.fasianos2);
-        txt2.setText(text2);
-
-        ImageView img3 = findViewById(R.id.image3);
-        TextView txt3 = findViewById(R.id.fasianos3);
-        txt3.setText(text3);
-
-        ImageView img4 = findViewById(R.id.image4);
-        TextView txt4 = findViewById(R.id.fasianos4);
-        txt4.setText(text4);
-
-        img1.setOnClickListener(v-> showDesc(img1,txt1));
-        img2.setOnClickListener(v-> showDesc(img2,txt2));
-        img3.setOnClickListener(v-> showDesc(img3,txt3));
-        img4.setOnClickListener(v-> showDesc(img4,txt4));
-
+        int[] imageIDs= new int[]{R.id.image1,R.id.image2,R.id.image3,R.id.image4};//get imageview ids array
+        int[] textIDs= new int[]{R.id.desc1,R.id.desc2,R.id.desc3,R.id.desc4};//get textview ids array
+        setListeners(imageIDs,textIDs,texts);//set listeners
     }
 }

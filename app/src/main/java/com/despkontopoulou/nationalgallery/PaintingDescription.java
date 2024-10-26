@@ -1,19 +1,21 @@
 package com.despkontopoulou.nationalgallery;
 
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class PaintingDescription extends AppCompatActivity {
     protected boolean isLightened = false;
     protected SharedPreferences preferences;
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         preferences = getSharedPreferences("preferences", MODE_PRIVATE);
         editPreferences();
     }
@@ -48,4 +50,36 @@ public class PaintingDescription extends AppCompatActivity {
         editor.apply();
 
     }
+    //find views using their ids
+    public ImageView[] findImageViews(int[] imageIDs){
+        ImageView[] imageviews= new ImageView[imageIDs.length];
+        for (int i=0;i<imageIDs.length;i++) {
+            imageviews[i]= findViewById(imageIDs[i]);
+        }
+        return imageviews;
+    }
+    public TextView[] findTextViews(int[] textIDs){
+        TextView[] textviews= new TextView[textIDs.length];
+        for (int i=0;i< textIDs.length;i++) {
+            textviews[i]= findViewById(textIDs[i]);
+        }
+        return textviews;
+    }
+    //set texts of descriptions using the string array of sharedpreferences
+    public void setTextViews(TextView[] textviews, String[] texts){
+        for(int i=0; i < textviews.length;i++){
+            textviews[i].setText(texts[i]);
+        }
+    }
+    //set listeners using the above
+    public void setListeners(int[]imageIDs,int[] textIDs,String[] texts){
+        ImageView[] imageviews= findImageViews(imageIDs);
+        TextView[] textviews=findTextViews(textIDs);
+        setTextViews(textviews,texts);
+        for(int i=0; i<imageviews.length;i++){
+            int j=i;
+            imageviews[j].setOnClickListener(v->showDesc(imageviews[j],textviews[j]));
+        }
+    }
+
 }

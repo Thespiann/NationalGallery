@@ -10,6 +10,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView13"
+        android:layout_width="168dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/stix_two_text"
+        android:gravity="end"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#6C737E"
+        android:textColorHighlight="#6C737E"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.583" />
+
+    <TextView
         android:layout_width="331dp"
         android:layout_height="144dp"
         android:fontFamily="@font/stix_two_text"
@@ -33,17 +52,29 @@
         android:layout_height="39dp"
         android:fontFamily="@font/stix_two_text"
         android:gravity="end"
-        android:text="@string/welcome"
+        android:text="Πατήστε στις εικόνες για να περιηγηθείτε στην εφαρμογή και να δείτε την περιγραφή ενός έργου"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#6C737E"
         android:textColorHighlight="#6C737E"
-        android:textSize="28sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="12dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/welcome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
