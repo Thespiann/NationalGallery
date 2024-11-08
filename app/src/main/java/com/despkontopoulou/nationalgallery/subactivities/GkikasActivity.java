@@ -6,10 +6,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.despkontopoulou.nationalgallery.PaintingDescription;
+import com.despkontopoulou.nationalgallery.PaintingView;
 import com.despkontopoulou.nationalgallery.R;
 
-public class GkikasActivity extends PaintingDescription {
+public class GkikasActivity extends PaintingView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

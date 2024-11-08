@@ -1,10 +1,8 @@
-package com.despkontopoulou.nationalgallery;
+package com.despkontopoulou.nationalgallery.Contracts;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.despkontopoulou.nationalgallery.Contracts.PaintingContract;
 
 public class PaintingDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="NationalGallery.db";
