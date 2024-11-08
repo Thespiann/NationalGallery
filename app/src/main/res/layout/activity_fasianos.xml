@@ -14,7 +14,7 @@
         android:background="@drawable/background"
         android:orientation="vertical"
         android:visibility="visible"
-        tools:context=".FasianosActivity">
+        tools:context=".subactivities.FasianosActivity">
 
         <View
             android:id="@+id/view6"

@@ -10,6 +10,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.despkontopoulou.nationalgallery.subactivities.FasianosActivity;
+import com.despkontopoulou.nationalgallery.subactivities.GkikasActivity;
+import com.despkontopoulou.nationalgallery.subactivities.PortraitsActivity;
+
 public class HomepageActivity extends AppCompatActivity {
 
     @Override

@@ -58,6 +58,9 @@ public class PaintingDescription extends AppCompatActivity {
         }
         return imageviews;
     }
+    public String[] getImageNames(String artist){}
+
+    public String[] getPaintingNames(String){}
     public TextView[] findTextViews(int[] textIDs){
         TextView[] textviews= new TextView[textIDs.length];
         for (int i=0;i< textIDs.length;i++) {
@@ -66,6 +69,8 @@ public class PaintingDescription extends AppCompatActivity {
         return textviews;
     }
     //set texts of descriptions using the string array of sharedpreferences
+
+    public void setImageResources(){----}
     public void setTextViews(TextView[] textviews, String[] texts){
         for(int i=0; i < textviews.length;i++){
             textviews[i].setText(texts[i]);

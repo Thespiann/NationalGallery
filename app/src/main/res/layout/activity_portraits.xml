@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/background"
         android:orientation="vertical"
-        tools:context=".PortraitsActivity">
+        tools:context=".subactivities.PortraitsActivity">
 
         <View
             android:id="@+id/view4"

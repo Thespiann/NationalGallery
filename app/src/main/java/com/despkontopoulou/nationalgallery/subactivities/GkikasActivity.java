@@ -1,10 +1,13 @@
-package com.despkontopoulou.nationalgallery;
+package com.despkontopoulou.nationalgallery.subactivities;
 
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.despkontopoulou.nationalgallery.PaintingDescription;
+import com.despkontopoulou.nationalgallery.R;
 
 public class GkikasActivity extends PaintingDescription {
     @Override
