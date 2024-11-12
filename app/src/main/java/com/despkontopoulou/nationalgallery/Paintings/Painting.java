@@ -1,4 +1,4 @@
-package com.despkontopoulou.nationalgallery;
+package com.despkontopoulou.nationalgallery.Paintings;
 
 public class Painting {
 

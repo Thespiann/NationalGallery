@@ -1,14 +1,11 @@
-package com.despkontopoulou.nationalgallery.DAOs;
+package com.despkontopoulou.nationalgallery.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.despkontopoulou.nationalgallery.Contracts.PaintingContract;
-import com.despkontopoulou.nationalgallery.Contracts.PaintingDbHelper;
-import com.despkontopoulou.nationalgallery.Painting;
+import com.despkontopoulou.nationalgallery.Paintings.Painting;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,11 +36,11 @@ public class PaintingDAO {
             insertPainting(new Painting("Χειρομάντης στο δωμάτιο του", "fasianos3", "Φασιανός", "Ζωγράφος"));
             insertPainting(new Painting("Πουλιά", "fasianos4", "Φασιανός", "Ζωγράφος"));
 
-            insertPainting(new Painting("Η γη", "gkikas1", "Γκίκας", "Ζωγράφος"));
+            insertPainting(new Painting("Η Γη", "gkikas1", "Γκίκας", "Ζωγράφος"));
             insertPainting(new Painting("Το νερό", "gkikas2", "Γκίκας", "Ζωγράφος"));
             insertPainting(new Painting("Ο βράχος", "gkikas3", "Γκίκας", "Ζωγράφος"));
             insertPainting(new Painting("Ανταύγιες της φωτιάς", "gkikas4", "Γκίκας", "Ζωγράφος"));
-            insertPainting(new Painting("Κήπος με κρεμασένα σεντόνια", "gkikas5", "Γκίκας", "Ζωγράφος"));
+            insertPainting(new Painting("Κήπος με κρεμασμένα σεντόνια", "gkikas5", "Γκίκας", "Ζωγράφος"));
 
             insertPainting(new Painting("Προσωπογραφία γυναίκας,\n Ράλλης Θεόδωρος", "portraits1", "Ράλλης", "Πορτραίτα"));
             insertPainting(new Painting("Προσωπογραφία Ζαφείρη Μάτσα,\n Αραβαντινός Πάνος", "portraits2", "Αραβαντινός", "Πορτραίτα"));

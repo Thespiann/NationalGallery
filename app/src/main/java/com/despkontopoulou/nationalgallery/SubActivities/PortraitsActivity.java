@@ -6,10 +6,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.despkontopoulou.nationalgallery.PaintingView;
+import com.despkontopoulou.nationalgallery.Paintings.PaintingUtils;
 import com.despkontopoulou.nationalgallery.R;
 
-public class PortraitsActivity extends PaintingView {
+public class PortraitsActivity extends PaintingUtils {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

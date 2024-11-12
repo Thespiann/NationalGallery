@@ -1,28 +1,42 @@
-package com.despkontopoulou.nationalgallery;
+package com.despkontopoulou.nationalgallery.Paintings;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.despkontopoulou.nationalgallery.DAOs.PaintingDAO;
+import com.despkontopoulou.nationalgallery.Database.PaintingDAO;
+import com.despkontopoulou.nationalgallery.TextToSpeech.Tts;
 
 import java.util.List;
 
 
-public class PaintingView extends AppCompatActivity {
+public class PaintingUtils extends AppCompatActivity {
     protected boolean isLightened = false;
+    private Tts tts;
     protected PaintingDAO paintingDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        paintingDAO= new PaintingDAO(this);
-
+        paintingDAO = new PaintingDAO(this);
+        tts = new Tts(this, new Tts.TtsInitListener() {
+            @Override
+            public void onTtsInitialized(boolean isSuccessful) {
+                if (isSuccessful) {
+                    // TTS Initialized successfully
+                    Toast.makeText(PaintingUtils.this, "TTS Initialized", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Initialization failed
+                    Toast.makeText(PaintingUtils.this, "TTS Initialization failed", Toast.LENGTH_SHORT).show();
+                }
             }
+        });
+    }
+
     public void showDesc(ImageView img, TextView text){//view is the clicked img
         if(isLightened){
             img.clearColorFilter();// remove lightening
@@ -30,6 +44,8 @@ public class PaintingView extends AppCompatActivity {
         }else{
             text.setVisibility(View.VISIBLE);//hide text
             img.setColorFilter(0x99FFFFFF, android.graphics.PorterDuff.Mode.SRC_OVER); // make lighter using white overlay
+            String title= text.getText().toString();
+            tts.speech(title);
         }
         isLightened=!isLightened;// toggle boolean
     }

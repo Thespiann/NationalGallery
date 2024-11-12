@@ -1,4 +1,4 @@
-package com.despkontopoulou.nationalgallery.Contracts;
+package com.despkontopoulou.nationalgallery.Database;
 
 import android.provider.BaseColumns;
 

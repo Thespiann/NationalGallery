@@ -10,7 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.despkontopoulou.nationalgallery.DAOs.PaintingDAO;
+import com.despkontopoulou.nationalgallery.Database.PaintingDAO;
 
 import java.util.Timer;
 import java.util.TimerTask;
