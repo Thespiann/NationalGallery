@@ -48,8 +48,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="168dp"
-        android:layout_height="39dp"
+        android:layout_width="184dp"
+        android:layout_height="57dp"
         android:fontFamily="@font/stix_two_text"
         android:gravity="end"
         android:text="@string/help"

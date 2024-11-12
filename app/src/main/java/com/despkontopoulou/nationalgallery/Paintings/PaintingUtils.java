@@ -27,11 +27,9 @@ public class PaintingUtils extends AppCompatActivity {
             @Override
             public void onTtsInitialized(boolean isSuccessful) {
                 if (isSuccessful) {
-                    // TTS Initialized successfully
-                    Toast.makeText(PaintingUtils.this, "TTS Initialized", Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(PaintingUtils.this, "Text to speech initialized for greek", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Initialization failed
-                    Toast.makeText(PaintingUtils.this, "TTS Initialization failed", Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(PaintingUtils.this, "Text to speech initialization failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
