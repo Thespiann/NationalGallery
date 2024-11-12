@@ -10,9 +10,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.despkontopoulou.nationalgallery.subactivities.FasianosActivity;
-import com.despkontopoulou.nationalgallery.subactivities.GkikasActivity;
-import com.despkontopoulou.nationalgallery.subactivities.PortraitsActivity;
+import com.despkontopoulou.nationalgallery.SubActivities.FasianosActivity;
+import com.despkontopoulou.nationalgallery.SubActivities.GkikasActivity;
+import com.despkontopoulou.nationalgallery.SubActivities.PortraitsActivity;
 
 public class HomepageActivity extends AppCompatActivity {
 

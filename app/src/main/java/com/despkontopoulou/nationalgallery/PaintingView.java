@@ -22,8 +22,7 @@ public class PaintingView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         paintingDAO= new PaintingDAO(this);
 
-        List<Painting> paintings=paintingDAO.getAllPaintings();
-    }
+            }
     public void showDesc(ImageView img, TextView text){//view is the clicked img
         if(isLightened){
             img.clearColorFilter();// remove lightening
@@ -59,4 +58,5 @@ public class PaintingView extends AppCompatActivity {
             imageview.setOnClickListener(v->showDesc(imageview,textview));
         }
     }
+
 }

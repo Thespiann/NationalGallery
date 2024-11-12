@@ -1,4 +1,4 @@
-package com.despkontopoulou.nationalgallery.subactivities;
+package com.despkontopoulou.nationalgallery.SubActivities;
 
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
@@ -20,16 +20,9 @@ public class GkikasActivity extends PaintingView {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        String text1= preferences.getString("gkikas1","desc");
-        String text2= preferences.getString("gkikas2","desc");
-        String text3= preferences.getString("gkikas3","desc");
-        String text4= preferences.getString("gkikas4","desc");
-        String text5= preferences.getString("gkikas5","desc");
-        String[] texts= new String[]{text1,text2,text3,text4,text5};
-
         int[] imageIDs= new int[]{R.id.image1,R.id.image2,R.id.image3,R.id.image4,R.id.image5};
         int[] textIDs= new int[]{R.id.desc1,R.id.desc2,R.id.desc3,R.id.desc4,R.id.desc5};
-        setListeners(imageIDs,textIDs,texts);
+        setPaintingsByPainter("Γκίκας", imageIDs,textIDs);
 
     }
 
